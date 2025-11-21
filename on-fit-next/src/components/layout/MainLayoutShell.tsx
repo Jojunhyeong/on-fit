@@ -4,9 +4,10 @@ import { useState } from "react"
 import Header from "@/components/common/Header"
 import BottomNav from "@/components/common/BottomNav"
 import LocationModal from "@/components/header/LocationModal"
-import { MapPin, Bell, Sun } from "lucide-react"
+import { MapPin, Bell, Sun, Divide } from "lucide-react"
 import AuthControls from "@/components/header/AuthControls"
 import { usePathname } from "next/navigation";
+import Image from "next/image"
 
 export default function MainLayoutShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -29,7 +30,9 @@ export default function MainLayoutShell({ children }: { children: React.ReactNod
       ) : (isChatOther || isCalendar) ? null : ( // /chat/... 에서는 헤더 숨김, /chat 은 보임
         <Header
           variant="main"
-          title="온 핏"
+          left={
+            <Image src="/logo.png" alt="로고" width={100} height={40} className="object-cover h-8"/>
+          }
           titleClassName="text-2xl text-gradient-brand font-bold"
           containerClassName="bg-card/80 backdrop-blur-sm border-b border-border"
           right={
