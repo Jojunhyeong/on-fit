@@ -155,10 +155,10 @@ export default function PostInfo() {
 
           {/* 추가 정보 */}
           <div className="space-y-3 pt-4 border-t border-border">
-            {data?.requirement && (
+            {data?.equipment && (
               <div>
                 <p className="text-sm font-medium mb-1">준비물</p>
-                <p className="text-sm text-muted-foreground">{data.requirement}</p>
+                <p className="text-sm text-muted-foreground">{data.equipment}</p>
               </div>
             )}
             {data?.fee && (

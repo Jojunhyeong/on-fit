@@ -9,7 +9,6 @@ export type Profile = {
   id: string;
   nickname: string;
   avatarUrl?: string | null;
-  profile_image: string;
   level: BadgeType;
   followers?: string[];
   following?: string[];
